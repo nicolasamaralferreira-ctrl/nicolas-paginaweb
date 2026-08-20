@@ -27,6 +27,9 @@
                 width: 80px;
                 height: 80px
             }
+            .artigo-autor {
+              font-weight: bold;  
+            }
 
         </style>
     </head>
@@ -40,9 +43,16 @@
             <div>
                 
                 <h2>meu primeiro post</h2>
-                </p>Por: Nicolas do Amaral Ferreira</p>
-                <p>baos-vindas ao meu novo blog! aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. </p>                
+                </p class="artigo-autor"> Por: Nicolas do Amaral Ferreira</p>
+                <p>baos-vindas ao meu novo blog! aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia. </p> 
+                <button>❤️ <span>0</span></button>               
             </div>
     </main> 
     </body>
+ <script>
+    const botao = document.querySelector("button");
+    botao.addEventListener("click", botaoClicado)
+ </script>   
 </html>
+
+video 3:16
