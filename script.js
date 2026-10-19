@@ -5,14 +5,14 @@ botoes.forEach(function (botao) {
 
     botao.addEventListener("click", function botaoClicado() {
         console.log("fui clicado");
-        let texto = botao.querySelector("span");
-        let contadorAtual = parseInt(texto.textContent);
+        let contadorSpan = botao.querySelector("span");
+        let contadorAtual = parseInt(contadorSpan.textContent, 10);
 
         if (curtiu === false) {
-            texto.textContent = contadorAtual + 1;
+            contadorSpan.textContent = contadorAtual + 1;
             curtiu = true;
         } else {
-            texto.textContent = contadorAtual - 1;
+            contadorSpan.textContent = contadorAtual - 1;
             curtiu = false;
         }
     });
