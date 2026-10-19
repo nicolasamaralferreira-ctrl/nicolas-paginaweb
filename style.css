@@ -1,42 +1,61 @@
-:root{
+:root {
     --cor-primaria: #045bdd;
-    --cor-sucundaria: #4685e4;
+    --cor-secundaria: #4685e4;
     --cor-fundo: #ffffff;
     --cor-texto: #020202;
     --cor-contraste: #eaeff7;
     --cor-botao: #fcfcfc;
+    
+    --fonte-texto: 'Segoe UI', sans-serif;
 }
 
-.tema-escuro button {}
+* {
+    transition: background-color 0.10s ease;
+}
 
+.tema-escuro {
+    --cor-primaria: #dee2e9;
+    --cor-secundaria: #000000;
+    --cor-fundo: #121212;
+    --cor-texto: #ffffff;
+    --cor-contraste: #01173b;
+    --cor-botao: #080000;
+}
 
+.tema-escuro p {
+    color: var(--cor-texto);
+}
 
- .tema-escuro button {
-    border: nome;
+.tema-escuro header p {
+    color: var(--cor-contraste);
+    font-weight: 600;
+}
+
+.tema-escuro a {
+    color: var(--cor-contraste);
+}
+
+.tema-escuro button {
+    border: none;
     background-color: var(--cor-botao);
-    color: var(--cor-texto)
- }
-
-
+    color: var(--cor-texto);
+}
 
 .tema-escuro article {
     background-color: #020202;
 }
-
 
 .tema-escuro h2 {
     color: var(--cor-primaria);
 }
 
 .tema-escuro .artigo-autor {
-    color : var(--cor-secundaria);
+    color: var(--cor-secundaria);
 }
-
 
 .tema-escuro .btn-tema-escuro {
     background-color: var(--cor-secundaria);
 }
-
 
 body {
     max-width: 100vw;
@@ -53,7 +72,7 @@ header {
 
 main {
     background-color: var(--cor-fundo);
-    color: #050588;
+    color: var(--cor-primaria);
     margin: 0 auto;
     padding: 16px;
     display: flex;
@@ -62,10 +81,12 @@ main {
 
 article {
     display: flex;
-    border: 1px solid #0462a1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
     margin: 16px;
     gap: 16px;
     padding: 16px;
+
     flex: 1 1 25%;
     flex-direction: column;
     align-items: center;
@@ -84,7 +105,7 @@ img {
 
 .btn-tema-escuro {
     position: fixed;
-    bottom: 16px
+    bottom: 16px;
     right: 16px;
     font-size: 32px;
     padding: 12px;
